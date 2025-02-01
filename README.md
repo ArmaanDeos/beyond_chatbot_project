@@ -47,8 +47,8 @@ A responsive chatbot configuration workflow implementation for BeyondChats' fron
 
 ### Core
 
-- **React** (v18) + **Next.js** (v14)
-- **TypeScript** for type safety
+- **React** (v18) + **React Router Dom** (v6.4)
+- **Javascript**
 - **Tailwind CSS** with modern dark theme
 - **Framer Motion** for animations
 
@@ -154,9 +154,7 @@ Test coverage includes:
 
 ## Deployment
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-username/beyondchats-assignment)
-
-Live Demo: [demo.beyondchats.vercel.app](https://your-vercel-app.vercel.app)
+Live Demo: [demo.beyondchats.netlify.app](https://beyondchatbot-armaan.netlify.app/)
 
 ## Evaluation Criteria Coverage
 

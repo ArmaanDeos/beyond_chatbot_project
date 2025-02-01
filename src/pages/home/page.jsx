@@ -4,7 +4,7 @@ import Header from "@/components/Home/Header";
 import PricingCard from "@/components/Home/PricingCard";
 import TestimonialCard from "@/components/Home/Testimonial";
 import { motion } from "framer-motion";
-import { FiCheck, FiStar } from "react-icons/fi";
+import { FiCheck } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
 const HomePage = () => {
@@ -48,7 +48,7 @@ const HomePage = () => {
           playsInline
           className="absolute top-0 left-0 w-full h-full object-cover"
         >
-          <source src="../../../public/assets//bg-video.mp4" type="video/mp4" />
+          <source src="/assets/bg-video.mp4" type="video/mp4" />
         </video>
         <div className="container mx-auto text-center relative z-10">
           <motion.div
