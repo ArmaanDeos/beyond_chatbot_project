@@ -43,15 +43,20 @@ const ChatbotPreview = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Feedback Topbar */}
-      <div className="fixed top-0 left-0 right-0 bg-indigo-600 text-white p-4 flex items-center justify-between">
-        <span className="font-medium">Chatbot not working as intended?</span>
-        <form onSubmit={handleFeedbackSubmit} className="flex gap-2">
+      <div className="fixed top-0 left-0 right-0 bg-indigo-600 text-white p-4 flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4 w-full max-w-screen-full mx-auto">
+        <span className="font-medium text-center sm:text-left text-sm sm:text-base">
+          Chatbot not working as intended?
+        </span>
+        <form
+          onSubmit={handleFeedbackSubmit}
+          className="flex w-full sm:w-auto gap-2"
+        >
           <input
             type="text"
             value={feedback}
             onChange={(e) => setFeedback(e.target.value)}
             placeholder="Share your feedback..."
-            className="px-4 py-2 rounded-lg bg-white/20 border border-white/30 text-black placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white"
+            className="flex-1 px-3 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white sm:min-w-[250px]"
           />
           <button
             type="submit"
@@ -67,7 +72,7 @@ const ChatbotPreview = () => {
         {/* Hero Section */}
         <section className="text-center py-16">
           <h1 className="text-5xl font-bold text-gray-900 mb-4">
-            Welcome to TechCorp
+            Welcome to Chatbot Preview
           </h1>
           <p className="text-xl text-gray-600 mb-8">
             Innovating the future of digital experiences
@@ -116,7 +121,7 @@ const ChatbotPreview = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
-              className="fixed bottom-24 right-6 w-full max-w-md bg-white rounded-xl shadow-2xl overflow-hidden border text-black dark:text-white dark:bg-gray-800"
+              className="fixed bottom-20 sm:bottom-24 right-4 sm:right-6 w-[90%] sm:max-w-md bg-white rounded-xl shadow-2xl overflow-hidden border text-black dark:text-white dark:bg-gray-800"
             >
               <div className="p-4 bg-indigo-600 text-white flex justify-between items-center">
                 <h3 className="text-lg font-semibold">Virtual Assistant</h3>
@@ -128,7 +133,7 @@ const ChatbotPreview = () => {
                 </button>
               </div>
 
-              <div className="h-96 overflow-y-auto p-4 space-y-4">
+              <div className="h-80 sm:h-96 overflow-y-auto p-4 space-y-4">
                 {messages.map((message) => (
                   <div
                     key={message.id}
@@ -172,7 +177,7 @@ const ChatbotPreview = () => {
         {/* Chat Trigger Button */}
         <button
           onClick={() => setIsChatOpen(!isChatOpen)}
-          className="fixed bottom-6 right-6 w-14 h-14 bg-indigo-600 hover:bg-indigo-700 rounded-full shadow-xl flex items-center justify-center text-white transition-transform hover:scale-110"
+          className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 w-12 h-12 sm:w-14 sm:h-14 bg-indigo-600 hover:bg-indigo-700 rounded-full shadow-xl flex items-center justify-center text-white transition-transform hover:scale-110"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

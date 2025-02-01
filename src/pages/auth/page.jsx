@@ -41,7 +41,7 @@ const AuthPage = () => {
   };
 
   return (
-    <div className="w-full h-screen flex items-center justify-center px-4">
+    <div className="min-h-screen  py-8 flex items-center justify-center px-4">
       <Card className="w-full max-w-[500px] bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl border border-gray-800/50 hover:border-cyan-500/30 transition-all group relative overflow-hidden text-white">
         <CardHeader>
           <CardTitle className="text-center text-3xl font-bold mt-4">
@@ -95,7 +95,7 @@ const AuthPage = () => {
                 Register
               </Button>
               <h2 className="text-center">Or</h2>
-              <Button variant="outline" className="w-full p-4 text-black">
+              <Button variant="outline" className="w-full px-4 text-black">
                 <FcGoogle className="mr-2" /> Continue with Google
               </Button>
             </CardFooter>
