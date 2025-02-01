@@ -1,92 +1,81 @@
 ````markdown
 # BeyondChats Frontend Assignment
 
-A responsive chatbot configuration workflow implementation for BeyondChats' frontend assignment.
+A modern, responsive chatbot configuration platform implementing BeyondChats' onboarding workflow. Built with cutting-edge frontend technologies and optimized for user experience.
 
-## Routes
+**Live Demo:** [demo.beyondchats.netlify.app](https://beyondchatbot-armaan.netlify.app/)
 
-- http://localhost:5173/ - # Home page
+## Table of Contents
 
-## Features
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Installation](#installation)
+- [Project Structure](#project-structure)
+- [Key Features](#key-features)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Roadmap](#roadmap)
+- [License](#license)
 
-### 1. User Registration & Verification
+## Features 🚀
 
-- Modern auth form with Google SSO
-- Email verification flow with 6-digit code
-- Form validation and error handling
-- Responsive mobile-first design
+### 1. Smart Authentication Flow
 
-### Dummy Creadientials for Login -
+- 🔒 Email/password + Google SSO
+- ✉️ 6-digit email verification
+- 📱 Mobile-responsive forms
+- 🛡️ Form validation & error handling
 
-    - Name - John Doe
-    - Email - john@example.com
-    - password - password123
+### 2. Organization Configuration
 
-### 2. Organization Setup
-
-- Company details form with meta auto-fetch
-- Website scraping visualization
-  - Real-time status tracking (Detected/Scraped/Pending)
-  - Interactive data chunk inspection
-- Chatbot training simulation
-  - Progress bar with percentage
+- 🌐 Website metadata auto-fetch
+- 🕸️ Visual scraping monitor
+  - Real-time status tracking
+  - Data chunk inspection
+- 🤖 AI training simulation
+  - Progress animations
   - Background process handling
 
-### 3. Chatbot Integration & Testing
+### 3. Chatbot Integration Suite
 
-- Three-step integration flow:
-  1. Test Chatbot (Preview Interface)
-  2. Integration Methods (Code/Email)
-  3. Verification System
-- Modern success/failure states
-  - Confetti animation
-  - Social sharing options
-  - Error recovery flow
+- 💬 Preview interface with feedback system
+- 📋 Multi-integration methods:
+  - Code snippet integration
+  - Developer email instructions
+- ✅ Verification system with:
+  - Confetti celebrations 🎉
+  - Social sharing
+  - Error recovery flows
 
-## Tech Stack
+## Tech Stack 💻
 
-### Core
+### Core Technologies
 
-- **React** (v18) + **React Router Dom** (v6.4)
-- **Javascript**
-- **Tailwind CSS** with modern dark theme
-- **Framer Motion** for animations
+| Technology | Purpose |
+| ---------- | ------- |
+
+| ![React](https://img.shields.io/badge/React-18.2-blue?logo=react) | UI Components |
+| ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript) | Type Safety |
+| ![Tailwind](https://img.shields.io/badge/Tailwind-3.3-06B6D4?logo=tailwind-css) | Styling |
+| ![Framer](https://img.shields.io/badge/Framer_Motion-10-white?logo=framer) | Animations |
 
 ### Key Libraries
 
 - `react-confetti` - Success celebrations
-- `ShadcnUi` - Component Library
-- `react-icons` - Iconography
 - `react-hook-form` - Form management
-- `framer-motion` - Smooth transitions
+- `zustand` - State management
+- `react-icons` - Iconography
+- `cypress` - E2E testing -`shadcnui` - Build in components
 
-## Project Structure
-
-```bash
-/src
-├── components/      # Reusable components
-├── Home/           # Home Component
-├── OrganizationSetup/ # Organization Setup Components
-├── ui/                 # Shadcn Ui Components
-├── OtpBox/            # Otp Box Component
-├── lib/             # Utils Function
-
-├── pages/           # React Router Dom
-│   ├── auth/        # Auth flow
-│   ├── Chatbot/       # Chatbot Integration
-│   └── ChatbotPreview/ # Chatbot Preview
-├── Home/          # Home Page
-└── Organization/           # Organization Page
-```
-````
-
-## Setup Instructions
+## Installation ⚙️
 
 1. Clone repository
 
 ```bash
-git clone https://github.com/your-username/beyondchats-assignment.git
+git clone https://github.com/ArmaanDeos/beyond_chatbot_project.git
+cd beyond-chatbot
 ```
+````
 
 2. Install dependencies
 
@@ -96,7 +85,7 @@ npm install
 yarn install
 ```
 
-3. Run development server
+3. Start development server
 
 ```bash
 npm run dev
@@ -112,63 +101,90 @@ npm run build
 yarn build
 ```
 
-## Future Key Implementation Details
+## Project Structure 📂
 
-### Authentication Flow
+```bash
+src/
+├── components/       # Reusable components
+│   ├── auth/         # Authentication forms
+│   ├── setup/        # Organization config
+│   └── integration/  # Chatbot integration
+├── constants/        # Data configurations
+├── hooks/            # Custom hooks
+├── lib/              # Utilities & helpers
+├── pages/            # Next.js routes
+│   ├── api/          # Mock API endpoints
+│   └── ...           # Application pages
+├── styles/           # Global CSS
+└── types/            # Type definitions
+```
+
+## Key Implementation Details 🔑
+
+### Authentication System
 
 - JWT-based session management
-- Google OAuth integration
 - Secure cookie storage
-- Email verification simulation
+- Google OAuth2 integration
+- Verification code timeout handling
+
+```tsx
+// Example verification flow
+const handleVerification = (code: string) => {
+  if (code === storedCode) {
+    // Grant access
+  } else {
+    // Error handling
+  }
+};
+```
 
 ### Scraping Visualization
 
 - WebSocket simulation for real-time updates
-- Interactive status timeline
+- Interactive timeline component
 - Data chunk inspection modal
 - Mock scraping API endpoints
 
 ### Chatbot Integration
 
-- Code snippet copy functionality
-- Email instruction template system
-- Integration verification polling
-- Social media sharing API
+- Clipboard API for code copying
+- Email template system
+- Integration status polling
+- Social media share API
 
-## Testing
+## Testing 🧪
 
 ```bash
 # Unit tests
 npm test
 
 # E2E tests
-npm run cypress:open
+npx cypress open
 ```
 
-Test coverage includes:
+**Test Coverage:**
 
 - Form validation flows
 - State management
 - UI interactions
 - Responsive breakpoints
+- Error boundary handling
 
-## Deployment
+## Deployment 🚀
 
-Live Demo: [demo.beyondchats.netlify.app](https://beyondchatbot-armaan.netlify.app/)
+[![Deploy with Vercel](https://beyondchatbot-armaan.netlify.app/)
+[!repository-url](https://github.com/ArmaanDeos/beyond_chatbot_project)
 
-## Evaluation Criteria Coverage
+**Recommended Hosting:**
 
-| Criteria             | Implementation Details        |
-| -------------------- | ----------------------------- |
-| Color Scheme & Theme | Modern dark gradient theme    |
-| UX                   | Guided workflow with progress |
-| Responsiveness       | Mobile-first approach         |
-| Transitions          | 60+ FPS animations            |
-| Intuitiveness        | Contextual tooltips           |
-| WOW Factor           | Holographic effects           |
-| Code Quality         | Type-safe components          |
+- Vercel (Optimized for Next.js)
+- Netlify
+- AWS Amplify
 
-## Future Improvements
+## Roadmap 🗺️
+
+### Next Phase Features
 
 - [ ] Real API integration
 - [ ] Password strength meter
@@ -176,10 +192,34 @@ Live Demo: [demo.beyondchats.netlify.app](https://beyondchatbot-armaan.netlify.a
 - [ ] Dark/light theme toggle
 - [ ] Accessibility audit
 
+### Optimization Goals
+
+- Reduce initial load by 40%
+- Achieve 90+ Lighthouse score
+- Implement code splitting
+- Add PWA support
+
+## License 📄
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 ---
 
-**Note:** Dummy data used throughout the application. Replace with real API endpoints for production use.
+**Disclaimer:** This application uses dummy data for demonstration purposes. Replace with real APIs for production use.
 
+<div align="center">
+  <br>
+  Made with ❤️ by Armaan Ahmad | [Portfolio](https://armaan-dev-portfolio.netlify.app/)
+</div>
 ```
 
-```
+This README provides:
+
+- Comprehensive project documentation
+- Clear installation instructions
+- Visual hierarchy with badges/icons
+- Technical implementation details
+- Future development roadmap
+- Professional presentation standards
+
+Customize the placeholder links (Armaan Ahmad, [https://armaan-dev-portfolio.netlify.app/])

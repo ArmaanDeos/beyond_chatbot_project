@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -56,12 +56,9 @@ const ChatbotIntegration = () => {
         <CardContent className="space-y-4">
           {/* Test Chatbot Button */}
           <div className="space-y-2">
-            <Button
-              className="w-full"
-              onClick={() => window.open("/chatbot/preview", "_blank")}
-            >
-              Test Chatbot
-            </Button>
+            <Link to={"/chatbot/preview"} target="_blank">
+              <Button className="w-full">Test Chatbot</Button>
+            </Link>
             <div className="text-sm text-muted-foreground">
               Opens chatbot preview in new tab
             </div>

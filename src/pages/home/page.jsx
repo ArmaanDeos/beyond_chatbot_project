@@ -57,12 +57,12 @@ const HomePage = () => {
             transition={{ delay: 0.2 }}
             className="max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
-              Next-Gen Cognitive Interfaces
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-white">
+              BeyondChat – Where Conversations Evolve
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Harness quantum machine learning and neural networks to transform
-              digital experiences
+              BeyondChat – Smart, Seamless, and Engaging Conversations for the
+              Future.
             </p>
             <Link to={"/auth/login"}>
               <motion.button
