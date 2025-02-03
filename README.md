@@ -26,6 +26,11 @@ A modern, responsive chatbot configuration platform implementing BeyondChats' on
 - 📱 Mobile-responsive forms
 - 🛡️ Form validation & error handling
 
+### Dummy User Login Credentials:
+- Name - John Doe
+- Email - john@example.con
+- Password - password123
+
 ### 2. Organization Configuration
 
 - 🌐 Website metadata auto-fetch
